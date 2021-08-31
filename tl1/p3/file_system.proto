@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message Path {
+    string value = 1;
+}
+message PathFiles {
+    repeated string values = 2;
+}
+message Booleano {
+    bool value = 1;
+}
+
+service FS {
+    rpc ListFiles(Path) returns (PathFiles){};
+    rpc OpenFiles(Path) returns (Booleano){};
+    rpc CloseFiles(Path) returns (Booleano){};
+    rpc ReadFiles(Path) returns (Path){};
+}

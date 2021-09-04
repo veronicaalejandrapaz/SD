@@ -42,12 +42,11 @@ class StubFSServicer(FSServicer):
         return response
     
     def ReadFiles(self, request, context):
-        #with open('test.bin', 'rb') as f:
         response = file_system_pb2.Path()
-        #with self._adapter.open_file(request.value) as archivo:
-        for r in self._adapter.read_file(request.value):
-            response.value = r
-            print("leido???¡")
+        fileCont =  self._adapter.read_file(request.value)
+        response.value = fileCont
+        print("leido???¡")
+        print(fileCont)
         return response
         #for r in self._adapter.read_file(request.value):
          #   response.value = r

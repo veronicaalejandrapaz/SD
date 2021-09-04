@@ -40,7 +40,7 @@ class FS:
                 if path in self._file_manager:
                     data = self._file_manager[path].read()
                 self.close_file(path)
-            return data
+                return data
         except Exception as e:
             print('ERROR!!! ', e)
             return None

@@ -10,7 +10,7 @@ def main():
     #respuesta = cliente.abrir_file('/home/veronica/Escritorio/punto3ds/unpsjb_distribuidos/tl1/p3/README.md')
     #respuesta = cliente.cerrar_file('/home/veronica/Escritorio/punto3ds/unpsjb_distribuidos/tl1/p3/README.md')
     #respuesta = cliente.cerrar_file('/home/veronica/Escritorio/punto3ds/unpsjb_distribuidos/tl1/p3/README.md')
-    respuesta = cliente.leer_file('/home/veronica/Escritorio/punto3ds/unpsjb_distribuidos/tl1/p3/README.md')
+    respuesta = cliente.leer_file('/home/veronica/Escritorio/dsPrimerTp/tl1/p3/README.md')
     print(respuesta)
 
 if __name__ == '__main__':

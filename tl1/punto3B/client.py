@@ -20,6 +20,10 @@ class Cliente:
     def cerrar_file(self, path):
         self.adapter.enviar_para_cerrar(path)
         print(path)
+    
+    def leer_file(self, path):
+        self.adapter.enviar_para_leer(path)
+        print(path)
 
     def recibir(self):
         return self.adapter.recibir()

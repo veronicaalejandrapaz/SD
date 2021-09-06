@@ -12,6 +12,9 @@ class StubServer:
    
    def close_file(self, path):
       self.server.send(path.encode('utf-8'))
+
+   def read_file(self, path):
+      self.server.send(path.encode('utf-8'))
    
    def recibir(self):
        msg = self.server.recv(4096)

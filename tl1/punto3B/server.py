@@ -17,15 +17,32 @@ class Server:
             return respuesta
     
     def close_file(self, path):
-        file_name = path
-        #size = 
-        archivo = path
-        if archivo.close():
+        with open(path, 'rb') as f:
+            while path:
+                f.read()
+            f.close()
             respuesta = "True"
             return respuesta
-        else:
-            respuesta = "False"
+        
+    def read_file(self, path):
+        with open(path, 'rb') as f:
+            while path:
+                f.read()
+                print(f.read())
+            respuesta = path
+            print(respuesta)
             return respuesta
+        
+        
+        #file_name = path
+        #size = 
+        #archivo = path
+        #if archivo.close():
+         #   respuesta = "True"
+          #  return respuesta
+        #else:
+         #   respuesta = "False"
+          #  return respuesta
 
     def recibir(self):
         return self.adapter.recibir()

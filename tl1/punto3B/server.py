@@ -18,19 +18,9 @@ class Server:
     
     def close_file(self, path):
         with open(path, 'rb') as f:
-            while path:
-                f.read()
+            f.read()
             f.close()
             respuesta = "True"
-            return respuesta
-        
-    def read_file(self, path):
-        with open(path, 'rb') as f:
-            while path:
-                f.read()
-                print(f.read())
-            respuesta = path
-            print(respuesta)
             return respuesta
         
         

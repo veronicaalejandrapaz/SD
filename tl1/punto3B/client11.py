@@ -8,8 +8,8 @@ def main():
     mock_stub = MockStub('localhost', 8090)
     cliente = Cliente(stub)
     cliente.conectar()
-    cliente.abrir_file('/home/veronica/Escritorio/dsPrimerTp/tl1/p3/README.md')
-    #cliente.cerrar_file('/home/veronica/Escritorio/dsPrimerTp/tl1/p3/README.md')
+    #cliente.abrir_file('/home/veronica/Escritorio/dsPrimerTp/tl1/p3/README.md')
+    cliente.cerrar_file('/home/veronica/Escritorio/dsPrimerTp/tl1/p3/README.md')
     respuesta = cliente.recibir()
     print(respuesta)
 

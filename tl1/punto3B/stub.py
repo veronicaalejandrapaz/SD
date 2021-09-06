@@ -19,8 +19,13 @@ class Stub:
       print(path)
    
    def enviar_para_cerrar(self, path):
-      self.client.send(path.encode('utf-8'))
-      print(path)
+      file = path
+      with open(file, 'rb') as f:
+         data = f.read(4096)
+         while data:
+            self.client.send(data)
+            data = f.read(4096)
+      #print(path)
      
    
    def recibir(self):
@@ -28,10 +33,5 @@ class Stub:
       return msg if not type(msg) == bytes else msg.decode()
 
 
-''' file = path
-         with open(file, 'rb') as f:
-            data = f.read(4096)
-            while data:
-               self.client.send(data)
-               data = f.read(4096)'''
+
       

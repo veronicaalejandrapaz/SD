@@ -20,7 +20,7 @@ while True:
 		if not data:
 			break     
 		#respuesta = servidor.open_file(data)
-		respuesta = servidor.read_file(data)
+		respuesta = servidor.cerrar_file(data)
 		connection.send(respuesta.encode('utf-8'))
 			#raise Exception(data)
 			#with open(data, 'rb') as f:

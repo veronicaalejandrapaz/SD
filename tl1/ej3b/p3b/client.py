@@ -8,7 +8,7 @@ class Client:
 
   def conectar(self):
     try:
-      self.adapter.connect()
+      self.adapter.conectar()
     except Exception as e:
       print('Connection error {e}')
 
@@ -39,6 +39,7 @@ class Client:
         literal = literal + 1
         payload = {'path': path, 'offset':offset, 'operacion':1, 'nro_bytes':number_bytes}
         print(payload)
+       # pdb.set_trace()
         data = self.adapter.read_file(payload.get('path'), offset, number_bytes)
         #raise Exception(data)
         offset = offset + literal

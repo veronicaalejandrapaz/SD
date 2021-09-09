@@ -34,13 +34,13 @@ class ClientStub:
         self._stub = None
 
 
-  def connect(self, host, port):
+  def conectar(self, host, port):
     self.host = host
     self.port = port
     try:
       print(self.url)
       self._channel = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-      self._channel.connect(self._appliance)
+      self._channel.conectar(self._appliance)
       self._stub = FSStub(self._channel)
       return True if self._channel else False
     except Exception as e:

@@ -2,13 +2,19 @@ from client import Client
 from client_stub import ClientStub
 
 def main():
-    stub = ClientStub('localhost', '50051')
+    stub = ClientStub('localhost', 8095)
     cliente = Client(stub)
     cliente.conectar()
-    #response = client.list_files('/home/veronica/Documentos/p3b/README.md')
     response = cliente.read_file('/home/veronica/Documentos/p3b/README.md')
-    #response = client.open_file('/home/veronica/Documentos/p3b/README.md')
-    print("salida del main")
+   # print("Ingrese una direccion de archivo o precione s para salir")
+    #mensaje = input(" -> ") 
+    '''while True:
+        if mensaje.lower().strip() != 's':
+
+            response = cliente.read_file(mensaje)
+            pass
+        else:
+            break'''
     print(response)
     
 

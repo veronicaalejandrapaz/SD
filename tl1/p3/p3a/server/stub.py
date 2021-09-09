@@ -48,18 +48,6 @@ class StubFSServicer(FSServicer):
         print("leido???¡")
         print(fileCont)
         return response
-        #for r in self._adapter.read_file(request.value):
-         #   response.value = r
-        #return response
-        #response = file_system_pb2.Byte()
-        #with self._adapter.open_file(request.value) as archivo:
-         #   leer = archivo.read_file(request.value)
-          #  print(leer)
-        #response.value = leer
-        #print("estoy leyendo???")
-        #print(response.value)
-        #yield response
-
 
 class Stub:
 

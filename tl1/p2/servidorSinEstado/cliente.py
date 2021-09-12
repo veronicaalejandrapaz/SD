@@ -31,10 +31,7 @@ def main():
             cliente.enviar(str(cliente.valor))
             data = cliente.recibir()  
             cliente.setValor(data)
-            cliente.enviar(str(cliente.valor))
-            #print(cliente.valor)
-            #print('Respuesta servidor: ' + cliente.valor)  #muestro por terminal
-           # mensaje = input(" -> ")  #tomo la entrada por teclado
+            #cliente.enviar(str(cliente.valor))
         elif comando == 'O':
             print("INGRESO COMANDO O")
             data = cliente.recibir()  

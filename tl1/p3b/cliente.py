@@ -1,11 +1,11 @@
 from client import Client
-from client_stub import ClientStub
+from stubCliente import ClientStub
 
 def main():
     stub = ClientStub('localhost', 8090)
     client = Client('localhost', 8090, stub)
     client.connect()
-    response = client.read_file('/home/veronica/Escritorio/dsPrimerTP/tl1/p3b/README.md')
+    response = client.read_file('/home/veronica/Escritorio/dsPrimerTp/tl1/p3b/README.md')
     
     
 
